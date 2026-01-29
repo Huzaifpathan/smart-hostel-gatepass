@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hostel Gate Pass System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-page">
+
+  <div class="login-wrapper">
+
+    <!-- LOGO WITH FALLBACK -->
+<img 
+  src="assets/logo.png"
+  alt="Hostel Logo"
+  class="login-logo"
+  onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='block';"
+/>
+
+<div id="logoFallback" style="display:none;font-size:48px;">🏠</div>
+
+
+    <!-- TITLE -->
+    <h2 class="login-title">Hostel Gate Pass</h2>
+
+    <!-- LOGIN CARD -->
+    <div class="login-card">
+
+      <input type="email" id="email" placeholder="Email address">
+      <input type="password" id="password" placeholder="Password">
+
+      <button onclick="login()">Login</button>
+
+      <p id="error"></p>
+    </div>
+
+  </div>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

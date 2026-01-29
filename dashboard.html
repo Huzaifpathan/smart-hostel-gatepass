@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard | Hostel Gate Pass</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h3>🏠 Hostel Gate Pass</h3>
+  <button onclick="logout()">Logout</button>
+</nav>
+
+<div class="container">
+
+  <!-- STUDENT DASHBOARD -->
+  <div id="studentDashboard" class="card hidden">
+    <h2>👨‍🎓 Student Dashboard</h2>
+
+    <input type="text" id="reason" placeholder="Reason for going out">
+    <input type="datetime-local" id="outTime">
+    <input type="datetime-local" id="returnTime">
+
+    <button onclick="requestPass()">Request Gate Pass</button>
+
+    <h3>Your Requests</h3>
+   <div id="studentRequests"></div>
+   <div id="qrSection"></div>
+
+  </div>
+
+  <!-- WARDEN DASHBOARD -->
+  <div id="wardenDashboard" class="card hidden">
+    <h2>👩‍🏫 Warden Dashboard</h2>
+    <div id="wardenRequests"></div>
+        <h3>📊 Entry / Exit Logs</h3>
+    <div id="wardenLogs"></div>
+  </div>
+
+  <!-- GUARD DASHBOARD -->
+  <div id="guardDashboard" class="card hidden">
+    <h2>🛂 Security Dashboard</h2>
+    <div id="reader" style="width:300px;"></div>
+    <p id="scanResult"></p>
+  </div>
+
+</div>
+
+<!-- QR Generator (load first) -->
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+<!-- QR Scanner -->
+<script src="https://unpkg.com/html5-qrcode"></script>
+
+<script type="module" src="js/dashboard.js"></script>
+<script type="module" src="js/student.js"></script>
+<script type="module" src="js/warden.js"></script>
+<script type="module" src="js/guard.js"></script>
+
+</body>
+</html>
